@@ -1,5 +1,5 @@
 // A function to edit a post
-async function editPost(event) {
+async function editPostForm(event) {
     event.preventDefault();
 
     // get the post id from the url
@@ -32,4 +32,4 @@ async function editPost(event) {
 
   }
   
-  document.querySelector('.edit-post-form').addEventListener('submit', editPost);
+  document.querySelector('.edit-post-form').addEventListener('submit', editPostForm);

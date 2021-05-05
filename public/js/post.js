@@ -1,5 +1,5 @@
 // New Post Form Handler
-async function post(event) {
+async function postForm(event) {
     event.preventDefault();
 
     // Get the post title and post text from the form
@@ -29,4 +29,4 @@ async function post(event) {
   }
   
   // Event Listener for the new post submit button
-  document.querySelector('.new-post-form').addEventListener('submit', post);
+  document.querySelector('.new-post-form').addEventListener('submit', postForm);

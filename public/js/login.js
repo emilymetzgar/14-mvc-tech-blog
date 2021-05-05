@@ -1,4 +1,4 @@
-async function login(event) {
+async function loginForm(event) {
     event.preventDefault();
 
     // get the information from the login form
@@ -26,4 +26,4 @@ async function login(event) {
     }
 }
 
-document.querySelector('.login-form').addEventListener('submit', login);
+document.querySelector('.login-form').addEventListener('submit', loginForm);
