@@ -1,3 +1,7 @@
+const { Post } = require('../models');
+
+const postData =
+
 [
     {
         "name": "MVC",
@@ -14,6 +18,8 @@
     {
         "name": "Server-Side APIs",
         "description": "One way the client can request this data is by using the Fetch Web API. The Fetch API can even request data from third-party APIs, like the OpenWeather API."      
-    }
+    },
   ]
   
+const seedPosts = () => Post.bulkCreate(postData);
+module.exports = seedPosts;
