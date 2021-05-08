@@ -1,32 +1,78 @@
-// New Post Form Handler
-async function postForm(event) {
-    event.preventDefault();
+const postCommentHandler = async (event) => {
+  event.preventDefault();
 
-    // Get the post title and post text from the form
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_text = document.querySelector('textarea[name="post-text"]').value;
-
-    // use the add a new post POST route to add the post 
-    // user id is added from the session information in the route
-    const response = await fetch(`/api/posts`, {
+  // Collect values from the form
+  const comment = document.querySelector('#comment').value.trim();
+  const postId = document.querySelector("#post").value;
+  
+  if (comment.length > 0) {
+    // Send a POST request to the API endpoint
+    const response = await fetch('/api/post/'+postId+"/comment", {
       method: 'POST',
-      body: JSON.stringify({
-        title,
-        post_text
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
+      body: JSON.stringify({ comment }),
+      headers: { 'Content-Type': 'application/json' },
     });
 
-    // if the response is okay, reload the page, showing the newest post now in the user's post list
     if (response.ok) {
-      document.location.replace('/dashboard');
-      // otherwise, display the error
+      // If successful, redirect the browser to the post page
+      document.location.replace('/post/'+postId);
     } else {
       alert(response.statusText);
     }
   }
+};
+
+const updatePostHandler = async (event) => {
+  event.preventDefault();
+
+  // Collect values from the form
+  const name = document.querySelector('#name').value.trim();
+  const description = document.querySelector('#description').value.trim();
+  const postId = document.querySelector("#post").value;
   
-  // Event Listener for the new post submit button
-  document.querySelector('.new-post-form').addEventListener('submit', postForm);
+  if (name && description && postId) {
+    // Send a PUT request to the API endpoint
+    const response = await fetch(`/api/post/${postId}`, {
+    method: 'PUT',
+      body: JSON.stringify({ name, description }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      // If successful, redirect the browser to the post page
+      document.location.replace('/post/'+postId);
+      alert("Post Updated");
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
+
+const delButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+  
+    const response = await fetch(`/api/post/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/profile');
+      alert("Post Deleted");
+    } else {
+      alert('Failed to delete post');
+    }
+  }
+};
+
+document
+  .querySelector('.post-comment')
+  .addEventListener('submit', postCommentHandler);
+
+document
+  .querySelector(".update-post-form")
+  .addEventListener("submit", updatePostHandler);
+
+document
+  .querySelector('.delete-post')
+  .addEventListener('click', delButtonHandler);
