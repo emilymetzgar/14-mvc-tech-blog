@@ -1,11 +1,11 @@
 <div class="text-center">
     <form class="form update-post-form">
         <h2 class="form-group">
-            <label for="name">Post Name:</label>
+            <label for="name">Post Title:</label>
             <input class="form-control" type="text" id="name" name="name" value="{{name}}" {{#unless (isAuthor user_id logged_in_user) }} readonly {{/unless}} />
         </h2>
         <div class="form-group">
-            <label for="description">Detail:</label>
+            <label for="description">Description:</label>
             <textarea class="form-control" type="textarea" id="description" name="description" {{#unless (isAuthor user_id logged_in_user) }} readonly {{/unless}}>{{description}}</textarea>
         </div>
         {{#if (isAuthor user_id logged_in_user) }}
@@ -18,7 +18,7 @@
         </div>
         {{/if}}
     </form>
-    <p><small>Created by {{user.name}} on {{formatDate createdAt}}</small></p>
+    <p><small>Written by {{user.name}} on {{formatDate createdAt}}</small></p>
     <div class="border">
         <h3>Leave a Comment</h3>
         <form class="form post-comment">
@@ -36,7 +36,7 @@
     {{#each comments as |comment|}}
     <div class="border" id="comment{{comment.id}}">
         <p>{{comment.comment}}</p>
-        <p><small>Created by {{comment.user.name}} on {{formatDate comment.createdAt}}</small></p>
+        <p><small>Written by {{comment.user.name}} on {{formatDate comment.createdAt}}</small></p>
     </div>
     {{/each}}
 </div>
