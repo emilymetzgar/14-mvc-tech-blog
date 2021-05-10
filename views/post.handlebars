@@ -1,5 +1,5 @@
 <div class="text-center">
-    <form class="form update-post-form">
+    <form class="form update">
         <h2 class="form-group">
             <label for="name">Post Title:</label>
             <input class="form-control" type="text" id="name" name="name" value="{{name}}" {{#unless (isAuthor user_id
@@ -15,7 +15,7 @@
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Update</button>
         </div>
-        <div class="form-group delete-post">
+        <div class="form-group delete">
             <button type="button" class="btn btn-danger" data-id="{{id}}">Delete</button>
         </div>
         {{/if}}
@@ -38,9 +38,9 @@
     {{#each comments as |comment|}}
     <div class="border" id="comment{{comment.id}}">
         <p>{{comment.comment}}</p>
-        <p><small>Written by {{comment.user.name}} on {{formatDate comment.createdAt}}</small></p>
+        <p>Written by {{comment.user.name}} on {{formatDate comment.createdAt}}</p>
     </div>
     {{/each}}
 </div>
-
+</div>
 <script src="../js/post.js"></script>

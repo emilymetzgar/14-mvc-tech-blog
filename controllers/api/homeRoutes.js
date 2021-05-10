@@ -54,6 +54,7 @@ router.get('/post/:id', async (req, res) => {
     console.log(post);
     console.log(req.session.user_id);
     res.render('post', {
+      //spread operator, take post out of the array, spread just takes the info out, destructuring takes specific things out
       ...post,
       logged_in: req.session.logged_in,
       logged_in_user: req.session.user_id
