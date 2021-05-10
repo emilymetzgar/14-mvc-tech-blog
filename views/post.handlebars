@@ -2,11 +2,13 @@
     <form class="form update-post-form">
         <h2 class="form-group">
             <label for="name">Post Title:</label>
-            <input class="form-control" type="text" id="name" name="name" value="{{name}}" {{#unless (isAuthor user_id logged_in_user) }} readonly {{/unless}} />
+            <input class="form-control" type="text" id="name" name="name" value="{{name}}" {{#unless (isAuthor user_id
+                logged_in_user) }} readonly {{/unless}} />
         </h2>
         <div class="form-group">
             <label for="description">Description:</label>
-            <textarea class="form-control" type="textarea" id="description" name="description" {{#unless (isAuthor user_id logged_in_user) }} readonly {{/unless}}>{{description}}</textarea>
+            <textarea class="form-control" type="textarea" id="description" name="description" {{#unless (isAuthor
+                user_id logged_in_user) }} readonly {{/unless}}>{{description}}</textarea>
         </div>
         {{#if (isAuthor user_id logged_in_user) }}
         <input type="hidden" name="post" id="post" value="{{id}}" />

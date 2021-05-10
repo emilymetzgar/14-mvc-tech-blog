@@ -57,7 +57,7 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/userProfile');
       alert("Post Deleted");
     } else {
       alert('Failed to delete post');
