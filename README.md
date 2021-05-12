@@ -8,7 +8,7 @@ This MVC Tech Blog is A CMS-style blog site similar to a Wordpress site, where d
 Open terminal and install dependencies "npm install". Set up data base in MySQL. Create .env file with appropriate info. When you are ready to go, run "npm run seed" in the terminal and then node server.js. 
 
 ## Usage 
-Open browser and go to URL https://localhost:3001 where you will be able to explore the tech blog website!
+Open browser and go to URL https://localhost:3001 
 
 
 ![A screenshot of the application](./public/assets/images/screenshot1.PNG)
