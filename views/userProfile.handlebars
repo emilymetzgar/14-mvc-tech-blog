@@ -29,14 +29,13 @@
     <h3>Your Posts:</h3>
 
     {{#each posts as |post| }}
-    <div class="card col-md-6">
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
+    <div class="card-main col-md-6">
+        <div class="row-cards">
           <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title" id="cardTitle">{{post.name}}</h5>
-              <p class="card=text" id="cardDescription">{{post.description}}</p>
-              <p class="card-text" id="cardDate">
+            <div class="body-cards">
+              <h5 class="card-title" id="card-title-id">{{post.name}}</h5>
+              <p class="card=text" id="card-description-id">{{post.description}}</p>
+              <p class="card-text" id="card-date-id">
                 <small class="text-muted">Written on: {{formatDate post.createdAt}}</small><BR>
                 <small class="text-muted">By:{{post.user.name}}</small>
               </p>
@@ -48,7 +47,6 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
     {{/each}}
   </div>

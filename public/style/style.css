@@ -22,3 +22,27 @@
   .row {
       display: flex;
   }
+
+ .card {
+   background-color: lightgrey;
+   border: none;
+   padding: 2px;
+   color: rgb(236, 8, 122);
+ }
+
+ a {
+   text-decoration: none;
+   color: black;
+ }
+
+label {
+  margin: 3px;
+  padding: 3px;
+}
+
+.btn {
+  margin: 3px;
+  padding: 3px;
+  background-color: hotpink;
+
+}
