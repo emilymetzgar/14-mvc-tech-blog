@@ -5,17 +5,19 @@ Writing about tech can be just as important as making it. Developers spend plent
 This MVC Tech Blog is A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. It follows the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ## Installation
-Open terminal and install dependencies "npm install". Set up data base in MySQL. Create .env file with appropriate info. When you are ready to go, run "npm run seed" in the terminal and then node server.js. 
+Open terminal and install dependencies "npm install". 
+Set up data base in MySQL. 
+Create .env file with your info. 
+When you are ready to go, run "npm run seed" in the terminal and then "node server.js". 
 
 ## Usage 
 Open browser and go to URL https://localhost:3001 
 
-
 ![A screenshot of the application](./public/assets/images/screenshot1.PNG)
 ![A screenshot of the application](./public/assets/images/screenshot1.PNG)
 ![A screenshot of the application](./public/assets/images/screenshot1.PNG)
 
-link to application:
+link to application deployed application at heroku:
 
 ## Credits
 Emily Metzgar
