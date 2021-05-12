@@ -7,10 +7,10 @@
           <h5 class="card-title" id="cardTitle">{{post.name}}</h5>
           <p class="card=text" id="cardDescription">{{post.description}}</p>
           <p class="card-text" id="cardDate">
-            <small class="text-muted">Written on: {{formatDate post.createdAt}}</small><BR>
-            <small class="text-muted">By:{{post.user.name}}</small>
+            <small>Written on: {{formatDate post.createdAt}}</small><BR>
+            <small>By:{{post.user.name}}</small>
           </p>
-          <p class="card-text"><small class="text-muted"><a href="./post/{{post.id}}" class="read-link"
+          <p class="card-text"><small><a href="./post/{{post.id}}" class="read-link"
                 id="readLink">View Post</a></small></p>
         </div>
       </div>
