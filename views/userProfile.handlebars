@@ -8,16 +8,16 @@
   <div class="col-md-6">
     <h3>Write a Blog Post:</h3>
 
-    <form class="form new-post-form">
-      <div class="form-group">
+    <form class="form new-post">
+      <div class="form">
         <label for="name">Post Title:</label>
         <input class="form-control" type="text" id="name" name="name" />
       </div>
-      <div class="form-group">
+      <div class="form">
         <label for="description">Description:</label>
         <textarea class="form-control" type="textarea" id="description" name="description"></textarea>
       </div>
-      <div class="form-group">
+      <div class="form">
         <button type="submit" class="btn btn-primary">Post Blog</button>
       </div>
     </form>
@@ -34,13 +34,13 @@
           <div class="col-md-8">
             <div class="body-cards">
               <h5 class="card-title" id="card-title-id">{{post.name}}</h5>
-              <p class="card=text" id="card-description-id">{{post.description}}</p>
+              <p class="card-text" id="card-description-id">{{post.description}}</p>
               <p class="card-text" id="card-date-id">
-                <small class="text-muted">Written on: {{formatDate post.createdAt}}</small><BR>
-                <small class="text-muted">By:{{post.user.name}}</small>
+                <small class="text">Written on: {{formatDate post.createdAt}}</small><BR>
+                <small class="text">By:{{post.user.name}}</small>
               </p>
               <p class="card-text">
-                <small class="text-muted">
+                <small class="text">
                   <a href="./post/{{post.id}}" class="read-post" id="readPost">View Post</a>            
                 </small>
               </p>

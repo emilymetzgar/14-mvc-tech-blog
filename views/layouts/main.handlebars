@@ -23,21 +23,7 @@
 
 <body>
 
-    <header>
-        <div class="container-fluid bg-dark">
-            <div class="row text-light">
-                <div class="text-start col-sm-6">
-                    <div class="fs-4 pt-4"> CMS Tech Blog</div>
-                </div>
-                <div class="text-end col-sm-6">
-                    <div class="fs-4"></div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <nav class="navbar navbar-expand-md navbar-dark mb-3">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler"
                 aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,6 +33,7 @@
                 <div class="col-sm-3 test-start">
                     <a class="navbar-brand text-start" href="/"></a>
                 </div>
+                <h1>CMS Tech Blog</h1>
                 <div class="col-sm-9 text-end collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -75,11 +62,12 @@
     <div class="container">
         <div class="row">
             <article class="col-12">
-                <div class="row y-1 mx-1">
+                <div class="row">
                     {{{body}}}
                 </div>
             </article>
         </div>
     </div>
 </body>
+
 </html>
