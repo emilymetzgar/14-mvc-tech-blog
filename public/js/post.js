@@ -76,6 +76,9 @@ document
   .querySelector(".update")
   .addEventListener("submit", updatePost);
 
-document
-  .querySelector('.delete')
-  .addEventListener('click', deletePost);
+
+const deleteButtonContainer = document.querySelector('.delete');
+if(deleteButtonContainer){
+  deleteButtonContainer.addEventListener('click', deletePost);
+}
+  
