@@ -17,7 +17,7 @@ Open browser and go to URL https://localhost:3001
 ![A screenshot of the application](./public/assets/images/screenshot1.PNG)
 ![A screenshot of the application](./public/assets/images/screenshot1.PNG)
 
-link to deployed application at heroku:
+link to deployed application at heroku: https://peaceful-fjord-85585.herokuapp.com/
 
 ## Credits
 Emily Metzgar
